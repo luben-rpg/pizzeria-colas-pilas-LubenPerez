@@ -57,9 +57,23 @@ Trabajas en el sistema de una pizzería universitaria:
 
 ## ❓ Preguntas de Comprensión (Obligatorias en el PR)
 1. ¿Por qué un sistema de delivery usa `Queue` para los pedidos pero `Stack` para la bitácora? ¿Qué problema surgiría si invertimos las estructuras?
-2. ¿Por qué es obligatorio verificar `Count == 0` antes de `Dequeue()` o `Pop()`? ¿Qué ocurre en ejecución si se omite?
-3. En el método `Deshacer`, ¿por qué es necesario analizar el texto con `.StartsWith()` antes de revertir? ¿Qué error lógico evitaría esto?
-4. ¿Qué ventaja tiene entregar mediante Fork + Pull Request en lugar de un archivo comprimido? ¿Cómo facilita la la retroalimentación?
+R:
+
+
+el Queue hace que la fila de pedidos, se qatienda por ordenm de llegada y el Stack, usa el ultimo click y  revierte 
+
+
+
+4. ¿Por qué es obligatorio verificar `Count == 0` antes de `Dequeue()` o `Pop()`? ¿Qué ocurre en ejecución si se omite?
+   
+R:  Por que el si el count es igual a 0 no hay nada que devolver mas que un error sin mas dado que el count ==0 es una validacion 
+
+
+7. En el método `Deshacer`, ¿por qué es necesario analizar el texto con `.StartsWith()` antes de revertir? ¿Qué error lógico evitaría esto?
+
+R: por que el programa de eswa forma sabe que se revierte y que no.
+
+9. ¿Qué ventaja tiene entregar mediante Fork + Pull Request en lugar de un archivo comprimido? ¿Cómo facilita la la retroalimentación?
 
 ## ✅ Checklist de Entrega
 - [ ] Código compila en SharpDevelop sin warnings críticos
