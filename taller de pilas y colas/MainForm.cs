@@ -41,6 +41,7 @@ namespace taller_de_pilas_y_colas
             // Limpiar campo y actualizar
             txtCliente.Clear();
             lblEstado.Text = string.Format("✅ Pedido registrado para {0}", cliente);
+            txtCliente.Focus();
             ActualizarUI();
         }
 
@@ -74,10 +75,13 @@ namespace taller_de_pilas_y_colas
             {
                 // Extraer nombre del cliente
                  string nombre = ultimaAccion.Replace("PEDIDO: ", "").Trim();
+                 
                 // Reconstruir cola excluyendo ese pedido
                string[] temporal = colaPedidos.ToArray();
+               
                 colaPedidos.Clear();
                 foreach (string p in temporal)
+                	
                 {
                     if (p != nombre)
                         colaPedidos.Enqueue(p);
@@ -87,7 +91,7 @@ namespace taller_de_pilas_y_colas
             else if (ultimaAccion.StartsWith("ENTREGADO:"))
             {
                 // Extraer nombre del cliente
-                 string nombre = ultimaAccion.Replace("PEDIDO: ", "").Trim();
+                 string nombre = ultimaAccion.Replace("ENTREGADO: ", "").Trim();
                 // Volver a encolar
                 colaPedidos.Enqueue(nombre);
                 lblEstado.Text = string.Format("↩️ Se deshizo la entrega a {0}", nombre);
@@ -133,9 +137,7 @@ namespace taller_de_pilas_y_colas
                 colaPedidos.Count, pilaBitacora.Count);
         }
         
-        void Button1Click(object sender, EventArgs e)
-        {
-        	  void Button1Click(object sender, EventArgs e)
+             	  void Button1Click(object sender, EventArgs e)
         {
         	 string cliente = txtCliente.Text.Trim();
 
@@ -167,4 +169,3 @@ namespace taller_de_pilas_y_colas
         }
         }
     }
-}

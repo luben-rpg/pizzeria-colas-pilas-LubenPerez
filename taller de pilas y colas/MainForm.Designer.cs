@@ -22,6 +22,7 @@
 
         private void InitializeComponent()
         {
+        	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
         	this.txtCliente = new System.Windows.Forms.TextBox();
         	this.btnNuevoPedido = new System.Windows.Forms.Button();
         	this.btnEntregar = new System.Windows.Forms.Button();
@@ -38,51 +39,61 @@
         	// 
         	this.txtCliente.Location = new System.Drawing.Point(12, 12);
         	this.txtCliente.Name = "txtCliente";
-        	this.txtCliente.Size = new System.Drawing.Size(200, 20);
+        	this.txtCliente.Size = new System.Drawing.Size(202, 22);
         	this.txtCliente.TabIndex = 0;
         	// 
         	// btnNuevoPedido
         	// 
+        	this.btnNuevoPedido.BackColor = System.Drawing.Color.Beige;
+        	this.btnNuevoPedido.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.btnNuevoPedido.Location = new System.Drawing.Point(220, 10);
         	this.btnNuevoPedido.Name = "btnNuevoPedido";
         	this.btnNuevoPedido.Size = new System.Drawing.Size(100, 23);
         	this.btnNuevoPedido.TabIndex = 1;
         	this.btnNuevoPedido.Text = "Nuevo Pedido";
-        	this.btnNuevoPedido.UseVisualStyleBackColor = true;
+        	this.btnNuevoPedido.UseVisualStyleBackColor = false;
         	this.btnNuevoPedido.Click += new System.EventHandler(this.BtnNuevoPedido_Click);
         	// 
         	// btnEntregar
         	// 
+        	this.btnEntregar.BackColor = System.Drawing.Color.Beige;
+        	this.btnEntregar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.btnEntregar.Location = new System.Drawing.Point(326, 10);
         	this.btnEntregar.Name = "btnEntregar";
         	this.btnEntregar.Size = new System.Drawing.Size(100, 23);
         	this.btnEntregar.TabIndex = 2;
         	this.btnEntregar.Text = "Entregar";
-        	this.btnEntregar.UseVisualStyleBackColor = true;
+        	this.btnEntregar.UseVisualStyleBackColor = false;
         	this.btnEntregar.Click += new System.EventHandler(this.BtnEntregar_Click);
         	// 
         	// btnDeshacer
         	// 
+        	this.btnDeshacer.BackColor = System.Drawing.Color.Beige;
+        	this.btnDeshacer.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.btnDeshacer.Location = new System.Drawing.Point(432, 10);
         	this.btnDeshacer.Name = "btnDeshacer";
         	this.btnDeshacer.Size = new System.Drawing.Size(100, 23);
         	this.btnDeshacer.TabIndex = 3;
         	this.btnDeshacer.Text = "Deshacer";
-        	this.btnDeshacer.UseVisualStyleBackColor = true;
+        	this.btnDeshacer.UseVisualStyleBackColor = false;
         	this.btnDeshacer.Click += new System.EventHandler(this.BtnDeshacer_Click);
         	// 
         	// btnLimpiar
         	// 
+        	this.btnLimpiar.BackColor = System.Drawing.Color.Beige;
+        	this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.btnLimpiar.Location = new System.Drawing.Point(538, 10);
         	this.btnLimpiar.Name = "btnLimpiar";
         	this.btnLimpiar.Size = new System.Drawing.Size(100, 23);
         	this.btnLimpiar.TabIndex = 4;
         	this.btnLimpiar.Text = "Limpiar todo";
-        	this.btnLimpiar.UseVisualStyleBackColor = true;
+        	this.btnLimpiar.UseVisualStyleBackColor = false;
         	this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
         	// 
         	// lstPedidos
         	// 
+        	this.lstPedidos.BackColor = System.Drawing.SystemColors.Info;
+        	this.lstPedidos.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.lstPedidos.FormattingEnabled = true;
         	this.lstPedidos.Location = new System.Drawing.Point(12, 50);
         	this.lstPedidos.Name = "lstPedidos";
@@ -91,6 +102,8 @@
         	// 
         	// lstBitacora
         	// 
+        	this.lstBitacora.BackColor = System.Drawing.Color.Crimson;
+        	this.lstBitacora.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.lstBitacora.FormattingEnabled = true;
         	this.lstBitacora.Location = new System.Drawing.Point(320, 50);
         	this.lstBitacora.Name = "lstBitacora";
@@ -100,35 +113,42 @@
         	// lblEstado
         	// 
         	this.lblEstado.AutoSize = true;
+        	this.lblEstado.BackColor = System.Drawing.SystemColors.ButtonFace;
         	this.lblEstado.Location = new System.Drawing.Point(12, 315);
         	this.lblEstado.Name = "lblEstado";
-        	this.lblEstado.Size = new System.Drawing.Size(91, 13);
+        	this.lblEstado.Size = new System.Drawing.Size(100, 13);
         	this.lblEstado.TabIndex = 7;
         	this.lblEstado.Text = "Listo para trabajar";
         	// 
         	// lblContador
         	// 
         	this.lblContador.AutoSize = true;
-        	this.lblContador.Location = new System.Drawing.Point(12, 340);
+        	this.lblContador.BackColor = System.Drawing.SystemColors.ButtonFace;
+        	this.lblContador.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.lblContador.Location = new System.Drawing.Point(12, 337);
         	this.lblContador.Name = "lblContador";
-        	this.lblContador.Size = new System.Drawing.Size(27, 13);
+        	this.lblContador.Size = new System.Drawing.Size(28, 13);
         	this.lblContador.TabIndex = 8;
         	this.lblContador.Text = "0 | 0";
         	// 
         	// button1
         	// 
+        	this.button1.BackColor = System.Drawing.Color.PaleGoldenrod;
+        	this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.button1.Location = new System.Drawing.Point(220, 315);
         	this.button1.Name = "button1";
         	this.button1.Size = new System.Drawing.Size(256, 35);
         	this.button1.TabIndex = 9;
         	this.button1.Text = "Pedido Vip";
-        	this.button1.UseVisualStyleBackColor = true;
+        	this.button1.UseVisualStyleBackColor = false;
         	this.button1.Click += new System.EventHandler(this.Button1Click);
         	// 
         	// MainForm
         	// 
         	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        	this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+        	this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
         	this.ClientSize = new System.Drawing.Size(650, 370);
         	this.Controls.Add(this.button1);
         	this.Controls.Add(this.lblContador);
@@ -140,6 +160,8 @@
         	this.Controls.Add(this.btnEntregar);
         	this.Controls.Add(this.btnNuevoPedido);
         	this.Controls.Add(this.txtCliente);
+        	this.DoubleBuffered = true;
+        	this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.Name = "MainForm";
         	this.Text = "Pizzería Campus Express";
         	this.ResumeLayout(false);
