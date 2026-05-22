@@ -22,23 +22,25 @@ namespace taller_de_pilas_y_colas
         }
 
         // PASO 1: Nuevo pedido (FIFO entrada)
-         private void BtnNuevoPedido_Click(object sender, EventArgs e)
+        private void BtnNuevoPedido_Click(object sender, EventArgs e)
         {
             string cliente = txtCliente.Text.Trim();
 
-
-            if (cliente == "")
+            // Validar entrada
+            
+ 			if (cliente == "")
             {
                 lblEstado.Text = string.Format("⚠️ Debe ingresar un nombre de cliente.");
                 return;
             }
-
-            colaPedidos.Enqueue(cliente);
+            // Agregar a la cola
+            
+ 			colaPedidos.Enqueue(cliente);
             pilaBitacora.Push(string.Format("PEDIDO: {0}", cliente));
 
+            // Limpiar campo y actualizar
             txtCliente.Clear();
             lblEstado.Text = string.Format("✅ Pedido registrado para {0}", cliente);
-            txtCliente.Focus();
             ActualizarUI();
         }
 
@@ -71,9 +73,9 @@ namespace taller_de_pilas_y_colas
             if (ultimaAccion.StartsWith("PEDIDO:"))
             {
                 // Extraer nombre del cliente
-                string nombre = ultimaAccion.Replace("PEDIDO: ", "").Trim();
-	            // Reconstruir cola excluyendo ese pedido
-	            string[] temporal = colaPedidos.ToArray();
+                 string nombre = ultimaAccion.Replace("PEDIDO: ", "").Trim();
+                // Reconstruir cola excluyendo ese pedido
+               string[] temporal = colaPedidos.ToArray();
                 colaPedidos.Clear();
                 foreach (string p in temporal)
                 {
@@ -85,10 +87,10 @@ namespace taller_de_pilas_y_colas
             else if (ultimaAccion.StartsWith("ENTREGADO:"))
             {
                 // Extraer nombre del cliente
-                string nombre = ultimaAccion.Replace("ENTREGADO: ", "").Trim();
+                 string nombre = ultimaAccion.Replace("PEDIDO: ", "").Trim();
                 // Volver a encolar
                 colaPedidos.Enqueue(nombre);
-	            lblEstado.Text = string.Format("↩️ Se deshizo la entrega a {0}", nombre);
+                lblEstado.Text = string.Format("↩️ Se deshizo la entrega a {0}", nombre);
             }
             else
             {
@@ -130,35 +132,5 @@ namespace taller_de_pilas_y_colas
             lblContador.Text = string.Format("Pedidos: {0} | Bitácora: {1}",
                 colaPedidos.Count, pilaBitacora.Count);
         }
-        
-        // aqui agregue la logica para el botn de los pedidps vip/premium/pro
-        void Button1Click(object sender, EventArgs e)
-        {
-        	 string cliente = txtCliente.Text.Trim();
-
-		    if (cliente == "")
-		    {
-		        lblEstado.Text = "⚠️ Debe ingresar un nombre de cliente.";
-		        return;
-		    }
-		
-		    string clienteVIP = " 🌟VIP" + cliente;
-		
-		    string[] pedidosRegulares = colaPedidos.ToArray();
-		    
-		    colaPedidos.Clear();
-		    
-		    colaPedidos.Enqueue(clienteVIP);
-		    
-		    foreach (string p in pedidosRegulares)
-		    {
-		        colaPedidos.Enqueue(p);
-		    }
-			    pilaBitacora.Push(string.Format("PEDIDO: {0}", clienteVIP));
-		
-		    txtCliente.Clear();
-		    lblEstado.Text = string.Format("🚀 Pedido Premium registrado. {0} saltó la fila.", cliente);
-		    txtCliente.Focus();
-		    ActualizarUI();
-        }
-    }}
+    }
+}
