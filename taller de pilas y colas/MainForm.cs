@@ -132,5 +132,39 @@ namespace taller_de_pilas_y_colas
             lblContador.Text = string.Format("Pedidos: {0} | Bitácora: {1}",
                 colaPedidos.Count, pilaBitacora.Count);
         }
+        
+        void Button1Click(object sender, EventArgs e)
+        {
+        	  void Button1Click(object sender, EventArgs e)
+        {
+        	 string cliente = txtCliente.Text.Trim();
+
+		    if (cliente == "")
+		    {
+		        lblEstado.Text = "⚠️ Debe ingresar un nombre de cliente.";
+		        return;
+		    }
+		
+		    string clienteVIP = " 🌟VIP  " + cliente;
+		
+		    string[] pedidosRegulares = colaPedidos.ToArray();
+		    
+		    colaPedidos.Clear();
+		    
+		    colaPedidos.Enqueue(clienteVIP);
+		    
+		    foreach (string p in pedidosRegulares)
+		    {
+		        colaPedidos.Enqueue(p);
+		    }
+			    pilaBitacora.Push(string.Format("PEDIDO: {0}", clienteVIP));
+		
+		    txtCliente.Clear();
+		    lblEstado.Text = string.Format("🚀 Pedido Premium registrado. {0} saltó la fila.", cliente);
+		    txtCliente.Focus();
+		    ActualizarUI();
+		 
+        }
+        }
     }
 }
