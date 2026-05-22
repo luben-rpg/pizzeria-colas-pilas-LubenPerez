@@ -1,0 +1,7 @@
+C:\Users\Usuario\Documents\SharpDevelop Projects\taller de pilas y colas\taller de pilas y colas\obj\Debug\taller de pilas y colas.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\SharpDevelop Projects\taller de pilas y colas\taller de pilas y colas\bin\Debug\taller de pilas y colas.exe
+C:\Users\Usuario\Documents\SharpDevelop Projects\taller de pilas y colas\taller de pilas y colas\bin\Debug\taller de pilas y colas.pdb
+C:\Users\Usuario\Documents\SharpDevelop Projects\taller de pilas y colas\taller de pilas y colas\obj\Debug\taller de pilas y colas.exe
+C:\Users\Usuario\Documents\SharpDevelop Projects\taller de pilas y colas\taller de pilas y colas\obj\Debug\taller de pilas y colas.pdb
+C:\Users\Usuario\Documents\SharpDevelop Projects\taller de pilas y colas\taller de pilas y colas\obj\Debug\taller_de_pilas_y_colas.MainForm.resources
+C:\Users\Usuario\Documents\SharpDevelop Projects\taller de pilas y colas\taller de pilas y colas\obj\Debug\taller de pilas y colas.csproj.GenerateResource.Cache
